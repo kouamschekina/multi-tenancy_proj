@@ -25,6 +25,7 @@
     "dev": "cross-env npm run build:server && medusa develop"
   },
   "dependencies": {
+    "@babel/runtime": "^7.24.8",
     "@medusajs/admin": "^7.1.14",
     "@medusajs/cache-inmemory": "latest",
     "@medusajs/cache-redis": "^1.9.1",
@@ -32,6 +33,9 @@
     "@medusajs/event-bus-redis": "^1.8.13",
     "@medusajs/file-local": "latest",
     "@medusajs/medusa": "^1.20.6",
+    "@nestjs/common": "^10.3.10",
+    "@nestjs/core": "^10.3.10",
+    "@nestjs/typeorm": "^10.0.2",
     "@tanstack/react-query": "5.50.1",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
@@ -41,6 +45,7 @@
     "medusa-interfaces": "latest",
     "medusa-payment-manual": "latest",
     "medusa-payment-stripe": "latest",
+    "pg": "^8.12.0",
     "prism-react-renderer": "^2.0.4",
     "typeorm": "^0.3.16"
   },
