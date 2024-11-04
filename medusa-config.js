@@ -82,7 +82,14 @@ const projectConfig = {
 
 /** @type {import('@medusajs/medusa').ConfigModule} */
 module.exports = {
-  projectConfig,
-  plugins,
+  projectConfig:{
+    redis_url: process.env.REDIS_URL,
+      database_url: process.env.DATABASE_URL,
+      database_type: "postgres",
+      database_extra: { ssl: {rejectUnauthorized: false}}
+  },
+  plugins:[
+    { resolve: `./src/plugins/multi-tenancy-plugin/`, options: {} },
+  ],
   modules,
 };
