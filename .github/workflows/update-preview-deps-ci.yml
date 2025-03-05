@@ -12,6 +12,11 @@ jobs:
         uses: styfle/cancel-workflow-action@0.9.1
         with:
           access_token: ${{ github.token }}
+          
+      - name: Ensure branch exists before checkout
+        run: |
+          git fetch origin feat/v2-ci || git checkout -b feat/v2-ci origin/main && git push origin feat/v2-ci
+        shell: bash
 
       - name: Checkout
         uses: actions/checkout@v4
